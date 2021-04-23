@@ -14,7 +14,16 @@
         <module>chapter4</module>
         <module>chapter5</module>
         <module>chapter6</module>
+        <module>chapter7</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
