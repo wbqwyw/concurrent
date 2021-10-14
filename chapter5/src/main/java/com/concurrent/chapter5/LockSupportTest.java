@@ -11,7 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * CopyOnWriteArrayList 类的弱一致性演示
  * 因为CopyOnWriteArrayList的原理是在快照上操作，迭代器也是一个快照
  */
-public class CopyOnWriteArrayListTest {
+public class LockSupportTest {
     private static volatile CopyOnWriteArrayList<String> copyOnWriteArrayList = new CopyOnWriteArrayList<>();
 
     public static void main(String[] args) throws InterruptedException {
