@@ -13,7 +13,9 @@ public class LockSupportlistTest {
 
         Thread thread = new Thread(() -> {
             System.out.println(" child begin lock!");
-            LockSupport.park();
+            while (!Thread.currentThread().isInterrupted()){
+                LockSupport.park();
+            }
             System.out.println(" child end lock!");
         });
 
@@ -21,7 +23,8 @@ public class LockSupportlistTest {
 
         Thread.sleep(1000);
         System.out.println(" main begin");
-        LockSupport.unpark(thread);
+        // LockSupport.unpark(thread);
+        thread.interrupt();
 
     }
 }

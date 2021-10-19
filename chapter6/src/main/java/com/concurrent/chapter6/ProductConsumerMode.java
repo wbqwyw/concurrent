@@ -29,6 +29,7 @@ public class ProductConsumerMode {
                         notEmpty.await();
                     }
                     queue.add("hello");
+                    System.out.println("productor-----");
                     notFull.signalAll();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -47,6 +48,7 @@ public class ProductConsumerMode {
                         notFull.await();
                     }
                     System.out.println(queue.poll());
+                    System.out.println("customer-----");
                     notEmpty.signalAll();
                 } catch (Exception e) {
                     e.printStackTrace();
